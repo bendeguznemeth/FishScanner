@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Fish Predictor View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="FishPredictorViewController" customModule="FishScanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AquaristicInfoIkon" translatesAutoresizingMaskIntoConstraints="NO" id="0Oy-OY-JPo">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DxD-yA-Mwe">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOA-oF-8h0" userLabel="NewImage">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="add"/>
+                                        <connections>
+                                            <action selector="onNewPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eMB-7W-XTe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3x-2h-eJ5" userLabel="Share">
+                                        <rect key="frame" x="125" y="0.0" width="125" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="action"/>
+                                        <connections>
+                                            <action selector="onShare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CFJ-LO-wKN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYz-go-t9g" userLabel="ListButton">
+                                        <rect key="frame" x="250" y="0.0" width="125" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="XyK-aB-Qtl" kind="presentation" id="fO8-UE-hYe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="DuS-DJ-6eu"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prediction" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zS0-EI-Mbc">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="3Wj-3W-3wQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0Oy-OY-JPo" firstAttribute="top" secondItem="zS0-EI-Mbc" secondAttribute="bottom" id="0x3-Lu-KBL"/>
+                            <constraint firstItem="zS0-EI-Mbc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="CNO-pV-60k"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DxD-yA-Mwe" secondAttribute="bottom" id="Eeq-nP-prQ"/>
+                            <constraint firstAttribute="trailing" secondItem="DxD-yA-Mwe" secondAttribute="trailing" id="Tpq-4p-YKR"/>
+                            <constraint firstItem="DxD-yA-Mwe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="USq-qW-GVG"/>
+                            <constraint firstAttribute="trailing" secondItem="0Oy-OY-JPo" secondAttribute="trailing" id="YOW-vI-uui"/>
+                            <constraint firstItem="zS0-EI-Mbc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ebr-Vt-Czc"/>
+                            <constraint firstAttribute="trailing" secondItem="zS0-EI-Mbc" secondAttribute="trailing" id="mdF-13-Opt"/>
+                            <constraint firstItem="DxD-yA-Mwe" firstAttribute="top" secondItem="0Oy-OY-JPo" secondAttribute="bottom" id="nFk-Kh-jzq"/>
+                            <constraint firstItem="0Oy-OY-JPo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qIz-1I-oqk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="0Oy-OY-JPo" id="vyn-U3-5y2"/>
+                        <outlet property="predictLabel" destination="zS0-EI-Mbc" id="d0n-I5-pAE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36" y="37.331334332833585"/>
+        </scene>
+        <!--List-->
+        <scene sceneID="TAp-wT-aVj">
+            <objects>
+                <viewController title="List" automaticallyAdjustsScrollViewInsets="NO" id="o3R-cs-eyd" customClass="TableViewController" customModule="FishScanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cgV-Bi-Qj1"/>
+                        <viewControllerLayoutGuide type="bottom" id="578-gU-Dgb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nmi-8G-1yB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YZf-kN-caS">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FishCell" textLabel="dt1-6M-spx" style="IBUITableViewCellStyleDefault" id="gpz-DH-SzF">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gpz-DH-SzF" id="yyE-Hi-jK8">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Fish Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dt1-6M-spx">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="o3R-cs-eyd" id="goI-5j-5Ww"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YZf-kN-caS" firstAttribute="top" secondItem="cgV-Bi-Qj1" secondAttribute="bottom" id="6Ju-dU-ADy"/>
+                            <constraint firstItem="578-gU-Dgb" firstAttribute="top" secondItem="YZf-kN-caS" secondAttribute="bottom" id="FwM-b3-hWP"/>
+                            <constraint firstItem="YZf-kN-caS" firstAttribute="leading" secondItem="nmi-8G-1yB" secondAttribute="leading" id="ZgL-up-hj0"/>
+                            <constraint firstAttribute="trailing" secondItem="YZf-kN-caS" secondAttribute="trailing" id="aRy-tY-2Yq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="List" id="dfT-c2-jZU">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="sds-Vc-g5f">
+                            <connections>
+                                <action selector="DoneList:" destination="o3R-cs-eyd" id="S2O-Qx-GYd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="YZf-kN-caS" id="ocR-CU-kbN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vrS-eB-clj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1506" y="37"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="50l-0X-9TI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XyK-aB-Qtl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="l41-P5-PLA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="o3R-cs-eyd" kind="relationship" relationship="rootViewController" id="vcM-xm-twD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vZs-lD-l22" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="774" y="37"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AquaristicInfoIkon" width="400" height="289"/>
+        <image name="action" width="19" height="27"/>
+        <image name="add" width="15" height="15"/>
+    </resources>
+</document>
