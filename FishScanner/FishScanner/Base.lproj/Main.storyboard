@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17A405" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="se4-gz-G96">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AquaristicInfoIkon" translatesAutoresizingMaskIntoConstraints="NO" id="0Oy-OY-JPo">
-                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <rect key="frame" x="0.0" y="108" width="375" height="515"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DxD-yA-Mwe">
@@ -48,7 +48,7 @@
                                         <rect key="frame" x="250" y="0.0" width="125" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="XyK-aB-Qtl" kind="presentation" id="fO8-UE-hYe"/>
+                                            <segue destination="o3R-cs-eyd" kind="show" id="YBE-Tp-NPq"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -57,7 +57,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prediction" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zS0-EI-Mbc">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="3Wj-3W-3wQ"/>
@@ -81,6 +81,7 @@
                             <constraint firstItem="0Oy-OY-JPo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qIz-1I-oqk"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="UtE-0q-3vx"/>
                     <connections>
                         <outlet property="imageView" destination="0Oy-OY-JPo" id="vyn-U3-5y2"/>
                         <outlet property="predictLabel" destination="zS0-EI-Mbc" id="d0n-I5-pAE"/>
@@ -88,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="36" y="37.331334332833585"/>
+            <point key="canvasLocation" x="2548" y="35.532233883058474"/>
         </scene>
         <!--List-->
         <scene sceneID="TAp-wT-aVj">
@@ -103,7 +104,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YZf-kN-caS">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FishCell" textLabel="dt1-6M-spx" style="IBUITableViewCellStyleDefault" id="gpz-DH-SzF">
@@ -137,42 +138,35 @@
                             <constraint firstAttribute="trailing" secondItem="YZf-kN-caS" secondAttribute="trailing" id="aRy-tY-2Yq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="List" id="dfT-c2-jZU">
-                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="sds-Vc-g5f">
-                            <connections>
-                                <action selector="DoneList:" destination="o3R-cs-eyd" id="S2O-Qx-GYd"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="YZf-kN-caS" id="ocR-CU-kbN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vrS-eB-clj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1506" y="37"/>
+            <point key="canvasLocation" x="3265" y="36"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="50l-0X-9TI">
+        <scene sceneID="obV-t6-ua3">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XyK-aB-Qtl" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="se4-gz-G96" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="l41-P5-PLA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PR1-Xb-Jp7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="o3R-cs-eyd" kind="relationship" relationship="rootViewController" id="vcM-xm-twD"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ecn-sI-3L1"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vZs-lD-l22" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8EU-8s-g6P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="774" y="37"/>
+            <point key="canvasLocation" x="1823" y="36"/>
         </scene>
     </scenes>
     <resources>
-        <image name="AquaristicInfoIkon" width="400" height="289"/>
+        <image name="AquaristicInfoIkon" width="1024" height="1024"/>
         <image name="action" width="19" height="27"/>
         <image name="add" width="15" height="15"/>
     </resources>

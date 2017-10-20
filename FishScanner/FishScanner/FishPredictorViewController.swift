@@ -52,7 +52,7 @@ class FishPredictorViewController: UIViewController, UIImagePickerControllerDele
         
         
     }
-    
+        
     @IBAction func onShare(_ sender: AnyObject) {
         let activityController = UIActivityViewController(activityItems: [imageView.image!], applicationActivities: nil)
         present(activityController, animated: true, completion: nil)
